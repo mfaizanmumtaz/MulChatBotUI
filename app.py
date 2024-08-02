@@ -39,7 +39,7 @@ msgs = StreamlitChatMessageHistory(key="langchain_messages")
 st.markdown("## 🔍 Chatbot For Minhaj University Lahore:")
 
 if len(msgs.messages) == 0:
-    msgs.add_ai_message("Hello! How can I assist you today?")
+    msgs.add_ai_message("Assalam o Alaikum! How can I assist you today?")
 
 
 for msg in msgs.messages:
