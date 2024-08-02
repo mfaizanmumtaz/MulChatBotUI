@@ -10,6 +10,12 @@ from more_itertools import chunked
 from langserve import RemoteRunnable
 
 # --- Logo ---
+st.set_page_config(
+    page_title="Minhaj University Chatbot",
+    page_icon="https://www.mul.edu.pk/images/minhaj-university-lahore.png",
+    layout="wide",
+)
+
 st.sidebar.image("https://www.mul.edu.pk/images/logo-mul.png", width=200)
 
 st.sidebar.title("Navigation")
