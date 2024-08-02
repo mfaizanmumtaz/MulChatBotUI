@@ -5,7 +5,8 @@ from langchain.prompts import (
     HumanMessagePromptTemplate,
     MessagesPlaceholder,
 )
-from itertools import batched
+from more_itertools import chunked
+
 from langserve import RemoteRunnable
 
 # --- Logo ---
@@ -48,7 +49,7 @@ if prompt := st.chat_input():
         try:
             _chat_history = st.session_state.langchain_messages[1:40]
             _chat_history_tranform = list(
-                batched([msg.content for msg in _chat_history], n=2)
+                chunked([msg.content for msg in _chat_history], n=2)
             )
 
             response = rag_chain.stream(
